@@ -1590,17 +1590,11 @@ void Adafruit_SPITFT::drawPixel(int16_t x, int16_t y, uint16_t color) {
   }
 }
 
-// -------------------------------------------------------------------------
-// Similar to the 'drawPixel' function above but sends an array of pixels
-// for the defined window. Typically useful for bitmap drawing or any
-// drawing with varying pixel values.
-// Array of pixels length must match window size.
-
 /*!
     @brief  Draw an array of pixels to the display at requested coordinates.
             Self-contained and provides its own transaction as needed
             (see writePixel(x,y,color) for a lower-level variant).
-            Edge clipping is performed here.
+            No edge clipping.
     @param  x      Horizontal position (0 = left).
     @param  y      Vertical position   (0 = top).
     @param  color  16-bit pixel color array in '565' RGB format.
